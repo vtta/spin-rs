@@ -1,6 +1,9 @@
 #![cfg_attr(all(not(feature = "std"), not(test)), no_std)]
 #![cfg_attr(docsrs, feature(doc_cfg))]
 #![deny(missing_docs)]
+#![allow(unsafe_op_in_unsafe_fn)]
+#![allow(unreachable_pub)]
+#![allow(elided_lifetimes_in_paths)]
 
 //! This crate provides [spin-based](https://en.wikipedia.org/wiki/Spinlock) versions of the
 //! primitives in `std::sync` and `std::lazy`. Because synchronization is done through spinning,
